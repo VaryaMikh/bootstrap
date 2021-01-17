@@ -7,6 +7,15 @@
 
 	<link rel="stylesheet" type="text/css" href="./assets/styles/lib/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/lib/bootstrap-reboot.min.css">
+
+	<style type="text/css">
+		.hero {
+			padding-top: 100px;
+		}
+		.hero__controls {
+			padding: 24px 0;
+		}
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -49,11 +58,17 @@
 	<section>
 		<div class="container">
 			<h1>Это - наимилейшие манулы</h1>
-			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+			<div class="hero_controls">
+				<button type="button" onclick="goToPrevSlide()"class="btn btn-primary btn-sm">Назад</button>
+				<button type="button" onclick="goToNextSlide()"class="btn btn-secondary btn-sm">Вперёд</button>
+			</div>
+
+			<div id="manulCarousel" class="carousel slide">
 			  	<ol class="carousel-indicators">
-			    	<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-			    	<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-			   		<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+			    	<li data-bs-target="#manulCarousel" data-bs-slide-to="0" class="active"></li>
+			    	<li data-bs-target="#manulCarousel" data-bs-slide-to="1"></li>
+			   		<li data-bs-target="#manulCarousel" data-bs-slide-to="2"></li>
 			  	</ol>
 			  	<div class="carousel-inner">
 			    	<div class="carousel-item active">
@@ -66,11 +81,11 @@
 			      		<img src="https://www.rgo.ru/sites/default/files/styles/headimage/public/category/289-sohranenie-redkih-vidov-manul-1535641909.jpg?itok=-ITTUFo6" class="d-block w-100" alt="...">
 			    	</div>
 			 	</div>
-			  	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+			  	<a class="carousel-control-prev" href="#manulCarousel" role="button" data-bs-slide="prev">
 			    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			    	<span class="visually-hidden">Previous</span>
 			 	 </a>
-			  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+			  	<a class="carousel-control-next" href="#manulCarousel" role="button" data-bs-slide="next">
 			    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			    	<span class="visually-hidden">Next</span>
 			 	</a>
@@ -79,5 +94,6 @@
 	</section>
 
 	<script type="text/javascript" src="./assets/scripts/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./assets/scripts/app.js"></script>
 </body>
 </html>
