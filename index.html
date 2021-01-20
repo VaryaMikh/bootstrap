@@ -10,10 +10,47 @@
 
 	<style type="text/css">
 		.hero {
-			padding-top: 100px;
+
 		}
 		.hero__controls {
 			padding: 24px 0;
+		}
+
+		.carousel {
+			max-height: 500px;
+			overflow: hidden;
+		}
+
+		.section {
+			padding-top: 100px;
+		}
+
+		.section.-products {
+			text-align: center;
+		}
+
+		.card {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.card:before {
+			display: block;
+			content: "";
+			position: absolute;
+			top: -100px;
+			left: -100px;
+			transform: rotate(170deg);
+			width: 70px;
+			height: 70px;
+			background-image: url(./assets/img/img.png);
+			background-size: cover;
+			transition: .3s;
+		}
+
+		.card:hover:before {
+			top: 0;
+			left: 0;
 		}
 	</style>
 </head>
@@ -57,12 +94,12 @@
 
 	<section>
 		<div class="container">
-			<h1>Это - наимилейшие манулы</h1>
+			<!-- <h1>Это - наимилейшие манулы</h1>
 
 			<div class="hero_controls">
 				<button type="button" onclick="goToPrevSlide()"class="btn btn-primary btn-sm">Назад</button>
 				<button type="button" onclick="goToNextSlide()"class="btn btn-secondary btn-sm">Вперёд</button>
-			</div>
+			</div> -->
 
 			<div id="manulCarousel" class="carousel slide">
 			  	<ol class="carousel-indicators">
@@ -89,6 +126,48 @@
 			    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			    	<span class="visually-hidden">Next</span>
 			 	</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section -products">
+		<div class="container">
+			<h1>Наши продукты</h1>
+			<h4 сlass="mb-5">Выберите то, от чего сердечко бьётся быстрее</h4>
+
+			<div class="row justify-content-center">
+				<div class="col-3">
+					<div class="card text-start">
+		  				<img src="https://avatars.mds.yandex.net/get-zen_doc/1040957/pub_5ccc65bd178ebe00b3e71fa6_5ccc65c057047600b3031765/scale_1200" class="card-img-top" alt="...">
+		 				<div class="card-body">
+		   					<h5 class="card-title">Погладить манула</h5>
+		    				<p class="card-text">Погладьте манула. Сделайте хорошо и себе ему. Расслабьтесь и расслабьте котика.</p>
+		    				<a href="#" class="btn btn-primary">Погладить</a>
+		  				</div>
+					</div>
+				</div>
+
+				<div class="col-3">
+					<div class="card text-start">
+		  				<img src="https://avatars.mds.yandex.net/get-zen_doc/1040957/pub_5ccc65bd178ebe00b3e71fa6_5ccc65c057047600b3031765/scale_1200" class="card-img-top" alt="...">
+		 				<div class="card-body">
+		   					<h5 class="card-title">Погладить манула</h5>
+		    				<p class="card-text">Погладьте манула. Сделайте хорошо и себе ему. Расслабьтесь и расслабьте котика.</p>
+		    				<a href="#" class="btn btn-primary">Погладить</a>
+		  				</div>
+					</div>
+				</div>
+
+				<div class="col-3">
+					<div class="card text-start">
+		  				<img src="https://avatars.mds.yandex.net/get-zen_doc/1040957/pub_5ccc65bd178ebe00b3e71fa6_5ccc65c057047600b3031765/scale_1200" class="card-img-top" alt="...">
+		 				<div class="card-body">
+		   					<h5 class="card-title">Погладить манула</h5>
+		    				<p class="card-text">Погладьте манула. Сделайте хорошо и себе ему. Расслабьтесь и расслабьте котика.</p>
+		    				<a href="#" class="btn btn-primary">Погладить</a>
+		  				</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
